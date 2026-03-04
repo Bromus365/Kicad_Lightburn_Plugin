@@ -126,8 +126,8 @@ Typical workflow:
 1. Run the plugin in KiCad to open the combined SVG in LightBurn.
 2. In LightBurn, verify each color is on its own layer (C00–Cxx).
 3. Configure layers:
-   - Top copper (red): engrave / shallow cut.
-   - Bottom copper (green): engrave / shallow cut (on the flipped board).
+   - **Top copper (red)**: set to **Fill** (no Line). This avoids LightBurn trying to cut along tiny internal boundaries where planes or traces meet; the laser will remove/mark copper by area instead of following every outline.
+   - **Bottom copper (green)**: also **Fill** only (no Line), on the flipped board.
    - Drills (blue): full‑depth cuts for holes.
    - Edge cuts (black): full‑depth cut of the board perimeter (run last).
    - Silkscreen (yellow/magenta): engraving for markings.
