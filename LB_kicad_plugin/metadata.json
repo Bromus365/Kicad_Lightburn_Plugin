@@ -1,0 +1,32 @@
+{
+  "$schema": "https://go.kicad.org/pcm/schemas/v1",
+  "name": "Plot via KiCad (LightBurn)",
+  "description": "Plot board layers to SVG, process via Inkscape, and open in LightBurn.",
+  "description_full": "KiCad 9 action plugin that plots F.Cu, B.Cu, Edge.Cuts, drills, and silkscreen to SVG using KiCad's plotter, optionally runs Inkscape to convert strokes to paths and union shapes for copper layers, and then opens the processed SVG in LightBurn for laser processing.",
+  "identifier": "com.bruno.plotlightburn",
+  "type": "plugin",
+  "author": {
+    "name": "Bruno",
+    "contact": {
+      "email": "bruno@example.com"
+    }
+  },
+  "maintainer": {
+    "name": "Bruno",
+    "contact": {
+      "email": "bruno@example.com"
+    }
+  },
+  "license": "MIT",
+  "resources": {
+    "icon": "resources/icon.png"
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "status": "stable",
+      "kicad_version": "9.0"
+    }
+  ]
+}
+
