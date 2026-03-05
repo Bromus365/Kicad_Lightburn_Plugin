@@ -59,14 +59,34 @@ DEFAULT_INKSCAPE_PATH = r"C:\Program Files\Inkscape\bin\inkscape.exe"
    resources/
    ```
 
-2. **Install in KiCad**
+3. **Metadata checklist (for future plugins)**
+
+   When creating a new KiCad action plugin that should be installable via the
+   Plugin & Content Manager, make sure your `metadata.json` at least contains:
+
+   - `"type": "plugin"`
+   - `"identifier"` – a unique string like `com.bruno.myplugin`
+   - `"name"` / `"description"` / `"license"`
+   - `"versions"` with a `kicad_version` entry (e.g. `"9.0"`)
+   - A `"resources"` section, for example:
+
+   ```json
+   "resources": {
+     "icon": "resources/icon.png"
+   }
+   ```
+
+   If the `resources` key is missing, KiCad will reject the package with an
+   error like “required property 'resources' not found in object”.
+
+4. **Install in KiCad**
 
    - Open **KiCad 9 → Plugin and Content Manager**
    - Click **Install from file…**
    - Choose the ZIP you just created
    - Confirm install and restart the **PCB Editor** if needed
 
-3. **Verify plugin appears**
+5. **Verify plugin appears**
 
    In the PCB Editor you should see:
 
